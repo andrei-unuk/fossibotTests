@@ -11,6 +11,12 @@ export class StationsPage extends BasePage {
         this.stationSectionLocator = this.page.locator('div.products > div');
     }
 
+    /**
+     * Get a station section by its name
+     * @param stationName - name of the station (e.g. "S7 Airlines")
+     * @returns 
+     */
+    
     public async getStationSection(stationName: string): Promise<StationSection> {
         return new StationSection(this.stationSectionLocator.filter({hasText: stationName}).first());
     }

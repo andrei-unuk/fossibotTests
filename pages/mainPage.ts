@@ -8,6 +8,9 @@ export class MainPage extends BasePage {
         super(page);
     }
 
+    /** Open the main page
+     * @param skipCookies - if true, the cookies window will be closed by clicking on the "Zaakceptuj wszystkie" button
+     */
     public async open(skipCookies: boolean = true): Promise<void> {
         await this.page.goto(URLs.mainPageUrl);
 
